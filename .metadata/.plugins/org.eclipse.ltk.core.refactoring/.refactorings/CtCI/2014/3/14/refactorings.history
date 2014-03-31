@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move 2 elements to &apos;CtCI/src/ctci.ch1.arraysandstrings&apos;&#x0A;- Original project: &apos;CtCI&apos;&#x0A;- Destination element: &apos;CtCI/src/ctci.ch1.arraysandstrings&apos;&#x0A;- Original elements:&#x0A;     StringBufferTest.java&#x0A;     StringBuffer.java&#x0A;- Update references to refactored element" description="Move compilation units" destination="/src&lt;ctci.ch1.arraysandstrings" element1="/src&lt;{StringBufferTest.java" element2="/src&lt;{StringBuffer.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" log="/src&lt;&#x09;/src&lt;ctci.ch1.arraysandstrings" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1396229903065" units="2" version="1.0"/>
-</session>
