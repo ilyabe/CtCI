@@ -1,0 +1,22 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class StringBuffer {
+
+	public List<String> strings = new ArrayList<String>();
+	
+	public void append(String string) {
+		strings.add(string);
+	}
+	
+	public String toString() {
+		String string = "";
+		
+		for (String s : strings) {
+			string += s;
+		}
+		
+		return strings;
+	}
+}
