@@ -12,7 +12,11 @@ public class StringBufferTest {
 		sb.append("Hello ");
 		sb.append("World");
 		sb.append("!");
-		assertEquals("Hello World!", sb.toString());
+		sb.append(" I ");
+		sb.append("am a ");
+		sb.append("simple ");
+		sb.append("StringBuffer!");
+		assertEquals("Hello World! I am a simple StringBuffer!", sb.toString());
 	}
 
 }

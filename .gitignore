@@ -1,6 +1,6 @@
 bin
 .DS_Store
-.classpath
-.project
+CtCI/.classpath
+CtCI/.project
 .metadata
 CtCI/.settings
