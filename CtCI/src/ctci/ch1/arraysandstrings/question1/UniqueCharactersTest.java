@@ -15,6 +15,9 @@ public class UniqueCharactersTest {
 		assertTrue(new UniqueCharacters("heLlo").areAllCharactersUnique());
 		
 		assertTrue(new UniqueCharacters("0123456789").areAllCharactersUnique());
+		assertFalse(new UniqueCharacters("01234567899").areAllCharactersUnique());
+		assertFalse(new UniqueCharacters(">>").areAllCharactersUnique());
+		assertTrue(new UniqueCharacters("><:;@?ABCDEFGabcdefg").areAllCharactersUnique());
 	}
 
 }
