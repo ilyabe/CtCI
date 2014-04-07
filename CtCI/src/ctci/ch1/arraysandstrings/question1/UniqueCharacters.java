@@ -15,7 +15,7 @@ public class UniqueCharacters {
 	
 	public boolean areAllCharactersUnique() {
 		
-		char[] chars = new char[NUMBER_OF_ASCII_CHARACTERS];
+		boolean[] chars = new boolean[NUMBER_OF_ASCII_CHARACTERS];
 		
 		// If there are more characters in the string than there are ASCII characters,
 		// then there must be repeats
@@ -23,15 +23,16 @@ public class UniqueCharacters {
 			return false;
 		}
 		
-		// Put each ASCII character in array, using its decimal value as the index
 		for (int i = 0; i < string.length(); i++) {
 			
+			int charDecimalValue = string.charAt(i);
+			
 			// Key into the array based on the character's decimal value
-			// If a character is already there, then it must not be unique
-			if (chars[string.charAt(i)] == string.charAt(i)) {
+			// If true, the char has already been found and isn't unique
+			if (chars[charDecimalValue]) {
 				return false;
 			}
-			chars[string.charAt(i)] = string.charAt(i);
+			chars[charDecimalValue] = true;
 		}
 		
 		return true;
