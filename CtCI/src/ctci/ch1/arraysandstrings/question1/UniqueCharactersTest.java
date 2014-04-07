@@ -11,9 +11,10 @@ public class UniqueCharactersTest {
 		assertFalse(new UniqueCharacters("hello").areAllCharactersUnique());
 		assertTrue(new UniqueCharacters("world").areAllCharactersUnique());
 		
-		// Missed this case initially, case-sensitive? 
-		// Let's assume case shouldn't matter, e.g. l and L aren't unique
-		assertFalse(new UniqueCharacters("heLlo").areAllCharactersUnique());
+		// L and l are different ASCII characters
+		assertTrue(new UniqueCharacters("heLlo").areAllCharactersUnique());
+		
+		assertTrue(new UniqueCharacters("0123456789").areAllCharactersUnique());
 	}
 
 }
