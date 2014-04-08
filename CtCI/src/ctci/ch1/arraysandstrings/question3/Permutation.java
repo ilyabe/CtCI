@@ -1,5 +1,7 @@
 package ctci.ch1.arraysandstrings.question3;
 
+import java.util.Arrays;
+
 public class Permutation {
 
 	private String string;
@@ -12,6 +14,8 @@ public class Permutation {
 		this.other = other;
 	}
 	
+	// Assumes case-sensitive and that whitespace is important
+	// Determines if permutation exists based on definition that character counts are the same
 	public boolean isPermutation() {
 		// If lengths are different, other is not a permutation
 		if (string.length() != other.length()) {
@@ -38,5 +42,21 @@ public class Permutation {
 		}
 		
 		return true;
+	}
+	
+	// Another way to determine permutation: sort the characters and check that results are equal
+	public boolean isPermutationViaStringSorting() {
+		// If lengths are different, other is not a permutation
+		if (string.length() != other.length()) {
+			return false;
+		}
+		
+		return sort(string).equals(sort(other));
+	}
+	
+	private String sort(String string) {
+		char[] contents = string.toCharArray();
+		Arrays.sort(contents);
+		return new String(contents);
 	}
 }
