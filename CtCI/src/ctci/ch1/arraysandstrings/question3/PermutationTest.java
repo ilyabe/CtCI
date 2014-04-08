@@ -13,6 +13,7 @@ public class PermutationTest {
 		assertFalse(new Permutation("aaB", "aa").isPermutation());
 		assertFalse(new Permutation("111234", "111235").isPermutation());
 		assertTrue(new Permutation("%#(%*!)@", "@()%%*!#").isPermutation());
+		assertFalse(new Permutation("jja", "jaa").isPermutation());	// Tests that character counts are the same as opposed to just matching
 	}
 
 }
