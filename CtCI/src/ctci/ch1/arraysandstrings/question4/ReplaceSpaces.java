@@ -13,13 +13,13 @@ public class ReplaceSpaces {
 		
 		for (int i = wordEnd; i >= 0; i--) {
 			if (isSpace(contents[i])) {
-				shiftRight(contents, i + 1, paddingEnd, wordEnd);
+				int spaceEnd = shiftRight(contents, i + 1, paddingEnd, wordEnd);
 				int wordLength = wordEnd - i;
-				paddingEnd -= wordLength;
+				paddingEnd = paddingEnd - wordLength - 3; // - an additional 3 for the %20
 				wordEnd = i - 1;
-				contents[i] = '%';
-				contents[i + 1] = '2';
-				contents[i + 2] = '0';
+				contents[spaceEnd] = '0';
+				contents[spaceEnd - 1] = '2';
+				contents[spaceEnd - 2] = '%';
 			}
 		}
 		System.out.println(new String(contents));
@@ -34,10 +34,11 @@ public class ReplaceSpaces {
 		return false;
 	}
 	
-	private void shiftRight(char[] contents, int wordStart, int paddingEnd, int wordEnd) {
+	private int shiftRight(char[] contents, int wordStart, int paddingEnd, int wordEnd) {
 		for (int i = wordEnd; i >= wordStart; i--) {
 			contents[paddingEnd] = contents[i];
 			paddingEnd--;
 		}
+		return paddingEnd;
 	}
 }
