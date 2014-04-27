@@ -51,13 +51,13 @@ public class Compression {
 		
 		// Compute the compression counts
 		int count = 1;
-		int k = 0;
+		int countsIndex = 0;
 		for (int i = 0; i < contents.length; i++) {
 			if (i+1 != contents.length && contents[i] != contents[i+1]) {	// The next char is different
 				// Save and reset the count
-				counts[k] = count;
+				counts[countsIndex] = count;
 				count = 1;
-				k++;
+				countsIndex++;
 			} else {
 				count++;
 			}
