@@ -12,6 +12,12 @@ public class Compression {
 		contents = string.toCharArray();
 	}
 
+	/*
+	 * This loops through the contents array twice, an array of contents' unique non-sequential characters once,
+	 * and once more through an array of character counts to create an array of characters followed by their counts.
+	 * 
+	 * Could be more simply implemented by using a StringBuffer, but using arrays only in the spirit of Ch. 1. 
+	 */
 	public String compress() {
 		
 		// Can we even compress?
