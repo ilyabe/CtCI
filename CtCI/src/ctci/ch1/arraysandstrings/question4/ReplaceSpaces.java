@@ -22,7 +22,6 @@ public class ReplaceSpaces {
 				contents[spaceEnd - 2] = '%';
 			}
 		}
-		System.out.println(new String(contents));
 		return new String(contents);
 		
 	}
