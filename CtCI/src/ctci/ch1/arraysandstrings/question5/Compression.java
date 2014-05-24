@@ -21,13 +21,16 @@ public class Compression {
 	public String compress() {
 		
 		// Can we even compress?
+		// Count goes up each time the next char is different
 		int compressionOpportunityCount = compressionOpportunityCount();
 		
 		if (!isCompressible(compressionOpportunityCount)) {
+			// This means there weren't any repeating characters
+			// Therefore, return the original string
 			return string;
 		}
 		
-		// We can compress, setup the compressed array
+		// Now start 2 arrays, each of size count, because that's how many characters can be compressed
 		// 1. An array to hold characters
 		char[] characters = new char[compressionOpportunityCount];
 		
@@ -35,7 +38,7 @@ public class Compression {
 		int[] counts = new int[compressionOpportunityCount];
 		
 		// 3. An array to merge the values
-		char[] compressed;	// Length to be determined once we have character and count lengths
+		char[] compressed;	// Length to be determined later, once we have character and count lengths
 		
 		// Put "to-compress" characters in characters array
 		int j = 0;
